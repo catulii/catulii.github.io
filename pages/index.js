@@ -104,51 +104,33 @@ export default function Home({ caseStudies }) {
 
       {/* PROJECTS */}
       <div className="all-projects">
-        <div className="container">
-          <div className="project-info">
-            <p className="project-number">01</p>
-            <div className="project-text">
-              <a>
-                <h3>Leading Edge - Spring ‘20</h3>
-                <h1>Web experience for a non-profit</h1>
-              </a>
-              <p>
-                Mobile wireframes and web design for Leading Edge, an
-                organization that influences change in how Jewish organizations
-                attract, develop, and retain top talent.
-              </p>
-            </div>
-          </div>
-          <div className="project-asset">
-            <img
-              className="project-asset-img"
-              src={caseStudies[1].coverImage.url}
-              alt={caseStudies[1].coverImage.alt}
-            ></img>
-          </div>
-        </div>
 
-        <div className="container">
-          <div className="project-info">
+      {caseStudies.map((study, i) => (
+        <div key={i} className="container">
+        <div className="project-info">
+          <p className="project-number">0{i+1}</p>
+          <div className="project-text">
             <a>
-              <h3>wireframing, web design</h3>
-              <h1>Leading Edge</h1>
+              <h3>{study.whowhen}</h3>
+              <h1>{study.title}</h1>
             </a>
             <p>
-              Web design for an organization that influences change in how
-              Jewish organizations attract, develop, and retain top talent.
+            {study.blurb}
             </p>
           </div>
-          <div className="project-asset">
-            <img
-              className="project-asset-img"
-              src={caseStudies[1].coverImage.url}
-              alt={caseStudies[1].coverImage.alt}
-            ></img>
-          </div>
+        </div>
+        <div className="project-asset">
+          <img
+            className="project-asset-img"
+            src={study.coverImage.url}
+            alt={study.coverImage.alt}
+          ></img>
         </div>
       </div>
-    </>
+      ))};
+        
+      </div>
+    </> 
   );
 }
 
@@ -162,7 +144,8 @@ export async function getStaticProps() {
           number: count,
           title: study.data.title[0].text,
           url: `/work/${encodeURIComponent(study.uid)}`,
-          type: study.data.type[0].text,
+          whowhen: study.data.whowhen[0].text,
+          blurb: study.data.blurb[0].text,
           coverImage: study.data.landing_image ?? null,
           csImage: study.data.hp_images,
         };

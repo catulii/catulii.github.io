@@ -1,0 +1,62 @@
+@import "./variables.scss";
+@import "animate.css";
+
+
+:root {
+    --animate-duration: 800ms;
+    background-color: $palegreen;
+}
+
+.all-projects:last-child {
+    margin-bottom: 100px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 176px;
+    padding-right: 250px;
+    padding-top: 170px;
+    color: $red;
+    background-color: #D9DAC9;
+
+}
+
+.container h3 {
+    font-size: 12px;
+    line-height: 18px;
+    // padding-bottom: 5px
+}
+
+.container h1 {
+    font-size: 50px;
+    line-height: 55px;
+    padding-bottom: 5px;
+}
+
+.container p {
+    font-size: 12px;
+    line-height: 14px;
+    width: 290px;
+}
+
+.project-number {
+    margin-bottom: 50px
+}
+
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 430px;
+    padding-left: 12px;
+}
+
+.project-asset img {
+    width: 500px;
+    margin-top: 50px
+
+}

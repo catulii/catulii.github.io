@@ -1,10 +1,5 @@
 @import "./navbar.scss";
-@import "./homeprojects.scss";
 @import "./variables.scss";
-@import "./mixins";
-
-:root {
-}
 
 * {
   box-sizing: border-box;
@@ -15,11 +10,6 @@
   margin: 0;
   padding: 0;
 }
-
-// a {
-//     color: none;
-//     text-decoration: none;
-//   }
 
 .main {
   width: 100%; //fallback
@@ -244,63 +234,3 @@
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
 }
-
-// .background-gradient {
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   top: 0;
-//   bottom: 0;
-//   z-index: -1;
-//   background-color: $grad_a;
-
-// background-color: var(--bg-color);
-// transition: background-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-// transition: var(--bg-transition-duration) background-color
-//   var(--bg-transition-easing) var(--bg-transition-delay);
-// transition: 5s ease-in;
-// background: radial-gradient( $grad_a, transparent);
-// transition-duration: 0.6s;
-//    transition-delay: 0.3s;
-//    alt-gradient-transition-easing: cubic-bezier(0.215,0.61,0.355,1);
-
-// background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-// background-size: 400% 400%;
-// animation: gradient 0.2s ease;
-//   transition: background-color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-// }
-
-// .background-gradient :hover {
-//         background-color: $grad_b;
-// }
-
-// body {
-//     background-color: white;
-// }
-
-// @keyframes gradient {
-// 	0% {
-// 		background: radial-gradient( $grad_b, transparent);
-// 	}
-// 	100% {
-// 		background: radial-gradient( $grad_a, transparent);
-// 	}
-// }
-
-// .alt-gradient {
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   top: 0;
-//   bottom: 0;
-//   z-index: -1;
-//   // transition: 5s ease;
-//   background-color: $grad_b;
-//   // background: radial-gradient( $grad_b, transparent);
-
-//   transition: background-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-
-//   // background: linear-gradient(-45deg, red, white, teal, grey);
-//   // background-size: 400% 400%;
-//   // animation: gradient 0.2s ease;
-// }

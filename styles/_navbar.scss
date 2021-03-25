@@ -1,6 +1,5 @@
 @import "./variables.scss";
 
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -10,7 +9,6 @@
   padding: 50px 40px 0px 40px;
   background-color: $red;
 }
-
 
 .nav-links-container {
   display: flex;
@@ -35,9 +33,9 @@
 }
 
 .nav-text {
-    font-variant-caps: all-small-caps;
-    // color: $grad_b;
-    text-decoration: none;
+  font-variant-caps: all-small-caps;
+  // color: $grad_b;
+  text-decoration: none;
 }
 
 .nav-text-active {
@@ -48,6 +46,6 @@
 }
 
 .nav-text:hover {
-    color: #0FA66E;
-    transition: 0.4s;
+  color: #0fa66e;
+  transition: 0.4s;
 }

@@ -6,7 +6,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import "animate.css";
 
-
 export default function Home({ caseStudies }) {
   const [bgHover, setBgHover] = useState(false);
   const [hover, setHover] = useState(false);
@@ -19,44 +18,87 @@ export default function Home({ caseStudies }) {
     setIndex(i);
   };
 
-  // console.log(caseStudies.map((study, i) => (study.title)));
-  // console.log(caseStudies[1].csImage);
   return (
     <>
       {/* <Navigation bg={hover} /> */}
       <div className="main animate__animated animate__fadeInDown">
         <svg src="wave.svg"></svg>
         <div>
-          <h1 className="animate__animated animate__fadeInDown hvr-grow" id="catu">CATU</h1>
-          <h1 className="animate__animated animate__fadeInDown" id="is">IS</h1>
-          <h1 className="animate__animated animate__fadeInDown" id="a">A</h1>
+          <h1
+            className="animate__animated animate__fadeInDown hvr-grow"
+            id="catu"
+          >
+            CATU
+          </h1>
+          <h1 className="animate__animated animate__fadeInDown" id="is">
+            IS
+          </h1>
+          <h1 className="animate__animated animate__fadeInDown" id="a">
+            A
+          </h1>
 
-          <a  id="designer">DESIGNER*</a>
+          <a id="designer">DESIGNER*</a>
 
-          <h1  className="animate__animated animate__bounceInUp" id="plus">+</h1>
+          <h1 className="animate__animated animate__bounceInUp" id="plus">
+            +
+          </h1>
 
           <div className="amongothers">
-            <a className="amongothers-item animate__animated animate__bounceInRight" id="illustrator">
+            <a
+              className="amongothers-item animate__animated animate__bounceInRight"
+              id="illustrator"
+            >
               ILLUSTRATOR
             </a>
-            <a className="amongothers-item animate__animated animate__bounceInRight" id="developer">
+            <a
+              className="amongothers-item animate__animated animate__bounceInRight"
+              id="developer"
+            >
               DEVELOPER
             </a>
-            <a className="amongothers-item animate__animated animate__bounceInRight" id="director">
+            <a
+              className="amongothers-item animate__animated animate__bounceInRight"
+              id="director"
+            >
               DESIGN DIRECTOR
             </a>
-            <a className="amongothers-item animate__animated animate__bounceInRight" id="cyclist">
+            <a
+              className="amongothers-item animate__animated animate__bounceInRight"
+              id="cyclist"
+            >
               CYCLIST
             </a>
           </div>
 
-          <h1 className="hvr-hang animate__animated animate__fadeIn" id="scroll">SCROLL</h1>
-          <h1 className="amongothers-item animate__animated animate__fadeIn" id="to">TO</h1>
-          <h1 className="amongothers-item animate__animated animate__fadeIn" id="see">SEE</h1>
-          <img className="amongothers-item animate__animated animate__bounceIn" id="eyes" src="./eyes.png"/>
-          <h1 className="amongothers-item animate__animated animate__fadeIn" id="herwork">HER WORK</h1>
-
-
+          <h1
+            className="hvr-hang animate__animated animate__fadeIn"
+            id="scroll"
+          >
+            SCROLL
+          </h1>
+          <h1
+            className="amongothers-item animate__animated animate__fadeIn"
+            id="to"
+          >
+            TO
+          </h1>
+          <h1
+            className="amongothers-item animate__animated animate__fadeIn"
+            id="see"
+          >
+            SEE
+          </h1>
+          <img
+            className="amongothers-item animate__animated animate__bounceIn"
+            id="eyes"
+            src="./eyes.png"
+          />
+          <h1
+            className="amongothers-item animate__animated animate__fadeIn"
+            id="herwork"
+          >
+            HER WORK
+          </h1>
         </div>
       </div>
 

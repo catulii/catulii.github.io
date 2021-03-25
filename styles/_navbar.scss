@@ -1,0 +1,53 @@
+@import "./variables.scss";
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 50px 40px 0px 40px;
+  background-color: $red;
+}
+
+
+.nav-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links-container :first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links-container :first-child::after {
+  content: "";
+  display: block;
+  width: 1rem;
+}
+
+.nav-links-container :last-child {
+  position: relative;
+}
+
+.nav-text {
+    font-variant-caps: all-small-caps;
+    // color: $grad_b;
+    text-decoration: none;
+}
+
+.nav-text-active {
+  font-variant-caps: all-small-caps;
+  // color: $grad_a;
+  color: black;
+  text-decoration: none;
+}
+
+.nav-text:hover {
+    color: #0FA66E;
+    transition: 0.4s;
+}

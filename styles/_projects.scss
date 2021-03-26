@@ -60,3 +60,9 @@
     margin-top: 50px
 
 }
+
+.container a:hover {
+    color: black;
+    transition: 0.5s ease;
+    cursor: pointer;
+}

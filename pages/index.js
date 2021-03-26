@@ -2,21 +2,29 @@ import Head from "next/head";
 import { Client } from "../prismic-configuration";
 import Navigation from "./components/nav";
 import { fetchCaseStudies } from "./api/case-study";
-import React, { useEffect, useRef, useState } from "react";
+import React, { componentDidMount, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import "animate.css";
+import $ from "jquery";
 
 export default function Home({ caseStudies }) {
   const [bgHover, setBgHover] = useState(false);
-  const [hover, setHover] = useState(false);
-  const [index, setIndex] = useState(2);
-  const workLinks = useRef(null);
-  const fornow = true;
 
-  const updateDisplay = (i, hoverState) => {
-    setHover(hoverState);
-    setIndex(i);
-  };
+  const workLinks = useRef(null);
+  const lefteyeRef = useRef(null);
+  const rightEyeRef = useRef(null);
+
+  function handleMouseMove(ev) {
+    const eyesEl = lefteyeRef.current;
+    const eyesElright = rightEyeRef.current;
+    const x = eyesEl.getBoundingClientRect().left + eyesEl.style.width / 2;
+    const y = eyesEl.getBoundingClientRect().top + eyesEl.style.height / 2;
+    const radian = Math.atan2(ev.pageX - x, ev.pageY - y);
+    let rot = radian * (180 / Math.PI) * -1 + 270;
+    const pop = "rotate(" + rot + "deg)";
+    eyesElright.style.transform = pop;
+    eyesEl.style.transform = pop;
+  }
 
   return (
     <>
@@ -70,10 +78,7 @@ export default function Home({ caseStudies }) {
             </a>
           </div>
 
-          <h1
-            className="hvr-hang animate__animated animate__fadeIn"
-            id="scroll"
-          >
+          <h1 className="animate__animated animate__fadeIn" id="scroll">
             SCROLL
           </h1>
           <h1
@@ -88,11 +93,23 @@ export default function Home({ caseStudies }) {
           >
             SEE
           </h1>
-          <img
+
+          <div
             className="amongothers-item animate__animated animate__bounceIn"
             id="eyes"
-            src="./eyes.png"
-          />
+            className="move-area"
+            onMouseMove={(ev) => handleMouseMove(ev)}
+          >
+            <div className="demeyes">
+              <div className="eye" ref={lefteyeRef}>
+                <div className="pupil"></div>
+              </div>
+              <div className="eye" ref={rightEyeRef}>
+                <div className="pupil"></div>
+              </div>
+            </div>
+          </div>
+
           <h1
             className="amongothers-item animate__animated animate__fadeIn"
             id="herwork"
@@ -104,33 +121,29 @@ export default function Home({ caseStudies }) {
 
       {/* PROJECTS */}
       <div className="all-projects">
-
-      {caseStudies.map((study, i) => (
-        <div key={i} className="container">
-        <div className="project-info">
-          <p className="project-number">0{i+1}</p>
-          <div className="project-text">
-            <a>
-              <h3>{study.whowhen}</h3>
-              <h1>{study.title}</h1>
-            </a>
-            <p>
-            {study.blurb}
-            </p>
+        {caseStudies.map((study, i) => (
+          <div key={i} className="container">
+            <div className="project-info">
+              <p className="project-number">0{i + 1}</p>
+              <div className="project-text">
+                <a className="linkme">
+                  <h3>{study.whowhen}</h3>
+                  <h1>{study.title}</h1>
+                </a>
+              </div>
+            </div>
+            <div className="project-asset">
+              <img
+                className="project-asset-img"
+                src={study.coverImage.url}
+                alt={study.coverImage.alt}
+              ></img>
+            </div>
           </div>
-        </div>
-        <div className="project-asset">
-          <img
-            className="project-asset-img"
-            src={study.coverImage.url}
-            alt={study.coverImage.alt}
-          ></img>
-        </div>
+        ))}
+        ;
       </div>
-      ))};
-        
-      </div>
-    </> 
+    </>
   );
 }
 

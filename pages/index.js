@@ -1,16 +1,15 @@
-import Head from "next/head";
-import { Client } from "../prismic-configuration";
 import Navigation from "./components/nav";
+import { getIndex } from "./api/case-study";
+import Footer from "./components/footer";
 import { fetchCaseStudies } from "./api/case-study";
-import React, { componentDidMount, useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import React, { useRef, useState } from "react";
 import "animate.css";
-import $ from "jquery";
+import Link from "next/link";
 
-export default function Home({ caseStudies }) {
-  const [bgHover, setBgHover] = useState(false);
 
-  const workLinks = useRef(null);
+
+export default function Home({ caseStudies, cyclist_img }) {
+
   const lefteyeRef = useRef(null);
   const rightEyeRef = useRef(null);
 
@@ -50,6 +49,8 @@ export default function Home({ caseStudies }) {
           <h1 className="animate__animated animate__bounceInUp" id="plus">
             +
           </h1>
+
+          <img src={cyclist_img.url}/>
 
           <div className="amongothers">
             <a
@@ -126,10 +127,10 @@ export default function Home({ caseStudies }) {
             <div className="project-info">
               <p className="project-number">0{i + 1}</p>
               <div className="project-text">
-                <a className="linkme">
+              <Link href={study.url} key={i}><a className="linkme">
                   <h3>{study.whowhen}</h3>
                   <h1>{study.title}</h1>
-                </a>
+                </a></Link> 
               </div>
             </div>
             <div className="project-asset">
@@ -141,28 +142,30 @@ export default function Home({ caseStudies }) {
             </div>
           </div>
         ))}
-        ;
       </div>
+
+      <Footer/>
     </>
   );
 }
 
 export async function getStaticProps() {
   const studies = await fetchCaseStudies();
-  const count = 0;
+  const index = await getIndex();
+
   return {
     props: {
+      cyclist_img: index.data.cyclist,
       caseStudies: studies.map((study) => {
         return {
-          number: count,
           title: study.data.title[0].text,
-          url: `/work/${encodeURIComponent(study.uid)}`,
+          url: `/case-study/${encodeURIComponent(study.uid)}`,
           whowhen: study.data.whowhen[0].text,
           blurb: study.data.blurb[0].text,
           coverImage: study.data.landing_image ?? null,
-          csImage: study.data.hp_images,
         };
       }),
     },
   };
 }
+

@@ -2,6 +2,22 @@
 @import "./variables.scss";
 @import "./projects.scss";
 @import "./eyes.scss";
+@import "./casestudy.scss";
+@import "./footer.scss";
+@import "./about.scss";
+
+:root {
+  background-color: $palegrey;
+
+}
+
+.main {
+  width: 100%;
+  width: 100vw;
+  background-color: #e43131;
+  height: 753px;
+  top: 0;
+}
 
 * {
   box-sizing: border-box;
@@ -11,15 +27,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  
-}
-.main {
-  width: 100%; //fallback
-  width: 100vw;
-  background-color: #e43131;
-  height: 753px;
-  top: 0;
-}
+  // background-color: $palegrey;
+  }
 
 .main h1 {
   color: white;
@@ -69,7 +78,6 @@
 .main a:hover {
   transform: rotate(15deg);
   z-index: 1000000;
-
 }
 
 #plus {
@@ -93,6 +101,11 @@
   transition: transform 0.3s;
   border: 1px solid white;
   border-radius: 0%;
+}
+
+.amongothers a:hover {
+  transform: rotate(15deg);
+  z-index: 1000000;
 }
 
 .amongothers-item {

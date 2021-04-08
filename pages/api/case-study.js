@@ -16,6 +16,11 @@ export const getAbout = async () => {
     return await getPage("about");
 };
 
+export const getIndex = async () => {
+    return await getPage("index");
+};
+
+
 const getPage = async (pageName) => {
     let page = await Client().query(
         Prismic.Predicates.at("document.type", pageName)

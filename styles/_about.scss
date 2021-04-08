@@ -1,0 +1,139 @@
+@import "./variables.scss";
+
+
+.about-wrapper {
+    height: 110vh;
+    width: 100%;
+}
+
+.about {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 60%;
+}
+
+.info-intro {
+    padding-left: 188px;
+    padding-top: 105px;
+}
+
+.info-intro h1 {
+    font-size: 56px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 80px;
+    padding-top: 40px;
+}
+
+.tabs{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 12px;
+    padding-left: 11px;
+}
+
+.tab {
+    border-left: 1px solid #CECECE;
+}
+
+.tab:hover{
+    border-left: 1px solid black;
+    transition: 3s;
+    cursor: pointer;
+}
+
+.tab:active {
+    border-left: 1px solid black;
+    transition: 3s;
+}
+
+.tab:hover ~ .tab::after {
+    transition:
+    transform ease var(--animation-time, 200ms),
+    opacity ease 0ms 200ms;
+  transform: translateY(100%);
+  }
+
+
+.info-text {
+    font-size: 14px;
+    line-height: 20px;
+    padding-left: 60px;
+    width: 100%;
+    max-width: 400px;
+    padding-right: 30px;
+}
+
+.info-text p {
+    padding-bottom: 30px
+}
+
+.right {
+    background-color: $red;
+    width: 100%;
+    max-width: 850px;
+    height: 100%;
+}
+
+
+.lilstar {
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.images {
+    padding-right: 62px;
+}
+
+.image-stack {
+    display: flex;
+    flex-direction: row;
+    padding-left: 62px;
+    padding-top: 94px;
+    
+}
+
+.image-stack_item {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.image-stack_item p {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 30px;
+    width: 240px;
+    color: $palegrey;
+}
+
+.image-stack_item-front {
+    z-index: 1;
+    margin-left: 56%;
+    margin-top: 45%;
+}
+
+.image-stack_item-back {
+    position: absolute;
+    z-index: 1;
+}
+

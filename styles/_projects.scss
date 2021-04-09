@@ -2,68 +2,82 @@
 @import "animate.css";
 
 .all-projects {
-    background-color: $palegrey;
-}
-
-.all-projects:last-child {
-    margin-bottom: 170px;
+  background-color: $palegrey;
+  margin-bottom: 100px;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 176px;
-    padding-right: 250px;
-    padding-top: 170px;
-    color: $red;
-    background-color: $palegrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 176px;
+  padding-right: 250px;
+  padding-top: 170px;
+  color: $red;
+  background-color: $palegrey;
 }
 
 .container a {
-    text-decoration: none;
-    color: $red;
+  text-decoration: none;
+  color: $red;
 }
 
 .container a:hover {
-    color: black;
-    transition: 0.5s ease;
-    cursor: pointer;
+  color: black;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .container h3 {
-    font-size: 12px;
-    line-height: 18px;
-    // padding-bottom: 5px
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .container h1 {
-    font-size: 50px;
-    line-height: 55px;
-    padding-bottom: 5px;
+  font-size: 50px;
+  line-height: 55px;
+  padding-bottom: 5px;
 }
 
 .container p {
-    font-size: 12px;
-    line-height: 14px;
-    width: 290px;
+  font-size: 12px;
+  line-height: 14px;
+  width: 290px;
 }
 
 .project-number {
-    margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
-
 .project-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 430px;
-    padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 430px;
+  padding-left: 12px;
 }
 
 .project-asset img {
-    width: 500px;
-    margin-top: 50px
+  width: 100%;
+  max-width: 500px;
+  margin-top: 50px;
+}
 
+@media only screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 174px;
+  }
+
+  .container h1 {
+    padding-right: 10px;
+  }
+
+  .project-number {
+    margin-bottom: 10px;
+  }
 }

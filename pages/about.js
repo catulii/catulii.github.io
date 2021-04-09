@@ -1,5 +1,6 @@
 import { RichText } from "prismic-reactjs";
 import { getAbout } from "./api/case-study";
+import Navigation from "./components/nav";
 import Footer from "./components/footer";
 import React, { useRef, useState } from "react";
 import Image1 from "react-svg-loader!./Star.svg";
@@ -20,6 +21,12 @@ const About = ({
 }) => {
   const [tab, setTab] = useState("stats");
 
+  console.log(f_text);
+
+  console.log(m_text);
+  console.log(s_text);
+
+
   const navDisplay = () => {
     switch (tab) {
       case "facts":
@@ -32,7 +39,7 @@ const About = ({
           </div>
         ));
       case "stats":
-        return stats.map((stat, i) => (
+        return stats.map((stat) => (
           <div className="test">
             <h3>
               <RichText render={stat.stats_text} />
@@ -41,7 +48,7 @@ const About = ({
           </div>
         ));
       case "misc":
-        return misc.map((m, i) => (
+        return misc.map((m) => (
           <div className="test">
             <h3>
               <RichText render={m.misc_text} />
@@ -54,7 +61,7 @@ const About = ({
 
   const imageDisplay = () => {
     switch (tab) {
-      case "facts":
+      case "stats":
         return (
           <div className="image-stack">
             <div className="image-stack_item image-stack_item-back">
@@ -66,10 +73,10 @@ const About = ({
             </div>
           </div>
         );
-      case "stats":
+      case "facts":
         return (
           <div className="image-stack">
-            <div className="image-stack_item image-stack_item-back">
+            <div className="image-stack_item team image-stack_item-back">
               <img src={s_img1.url} />
               <RichText render={s_text} />
             </div>
@@ -81,12 +88,12 @@ const About = ({
       case "misc":
         return (
           <div className="image-stack">
-            <div className="image-stack_item image-stack_item-back">
-              <img src={m_img1.url} />
+            <div className=" misc_item-back">
+              <img src={m_img2.url} />
               <RichText render={m_text} />
             </div>
-            <div className="image-stack_item image-stack_item-front">
-              <img src={m_img2.url} />
+            <div className="image-stack_item twilight misc_item-front">
+              <img src={m_img1.url} />
             </div>
           </div>
         );
@@ -94,6 +101,8 @@ const About = ({
   };
 
   return (
+    <>
+    <Navigation/>
     <div className="about-wrapper">
       <div className="about">
         <div className="left">
@@ -103,7 +112,7 @@ const About = ({
 
           <div className="info">
             <div className="tabs-wrapper">
-              <nav className="tabs">
+              <div className="tabs">
                 <a className="tab" onMouseEnter={(ev) => setTab("facts")}>
                   FACTS
                 </a>
@@ -113,7 +122,7 @@ const About = ({
                 <a className="tab" onMouseEnter={(ev) => setTab("misc")}>
                   MISC
                 </a>
-              </nav>
+              </div>
             </div>
 
             <div className="info-text">{navDisplay()}</div>
@@ -125,6 +134,7 @@ const About = ({
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 
@@ -133,17 +143,17 @@ export async function getStaticProps() {
   return {
     props: {
       facts: about.data.facts,
-      f_img1: about.data.facts_img1 ?? null,
-      f_img2: about.data.facts_img2 ?? null,
-      f_text: about.data.facts_text ?? null,
+      f_img1: about.data.facts_img1,
+      f_img2: about.data.facts_img2,
+      f_text: about.data.facts_text,
       stats: about.data.stats,
-      s_img1: about.data.stats_img1 ?? null,
-      s_img2: about.data.stats_img2 ?? null,
-      s_text: about.data.stats_text ?? null,
+      s_img1: about.data.stats_img1,
+      s_img2: about.data.stats_img2,
+      s_text: about.data.stats_img_text,
       misc: about.data.misc,
-      m_img1: about.data.misc_img1 ?? null,
-      m_img2: about.data.misc_img2 ?? null,
-      m_text: about.data.misc_text ?? null,
+      m_img1: about.data.misc_img1,
+      m_img2: about.data.misc_img2,
+      m_text: about.data.misc_img_text,
     },
   };
 }

@@ -1,29 +1,19 @@
 import Link from "next/link";
-import React from "react";
+import React, {useRef, useEffect}from "react";
 
-const Navigation = (bg) => {
+const Navigation = () => {
 
   return (
-    <nav className="nav-container">
-      <a className="logo-container">
-        <div className={!bg ? "nav-text" : "nav-text-active"}>Catu Berretta</div>
-      </a>
-      <ul className="nav-links-container">
-        <li>
-          <Link href="/work">
-            <a className={!bg ? "nav-text" : "nav-text-active"} id="work-nav">
-              work
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/about">
-          <a className={!bg ? "nav-text" : "nav-text-active"} id="about-nav">
-              about
-            </a>
-          </Link>
-        </li>
-      </ul>
+    <nav classname="landing">
+      <div className="nav">
+        <div>
+          <Link href="/">CATU BERRETTA</Link>
+        </div>
+        <div id="right-nav">
+          <Link href="/work">WORK</Link>
+          <Link href="/about">ABOUT</Link>
+        </div>
+      </div>
     </nav>
   );
 };

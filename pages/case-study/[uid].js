@@ -3,41 +3,58 @@ import { RichText, Link, Date } from "prismic-reactjs";
 import PropTypes from "prop-types";
 import CaseStudySection from "../components/case-study-section";
 import Footer from "../components/footer";
+import NavigationCS from "../components/nav";
 
 
-const CaseStudy = ({ title, blurb, role, focus, body }) => {
+const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
+
+  const checkOut = () => {
+    switch (uid) {
+      case "leadingedge":
+        return (
+          <div className="bottom">
+            <p>You can check out the live site <a href="https://www.leadingedge.org/">here</a></p>
+          </div>
+        )
+        case "afh":
+          return (
+            <div className="bottom">
+              <p>You can check out the hi-fi wireframes <a href="https://www.figma.com/proto/cd09VVWSranlV8Wn0ZjxpS/AFH-Hi-FI-Wireframes?node-id=231%3A4&scaling=min-zoom&page-id=231%3A0">here</a></p>
+            </div>
+          )
+    }
+  }
   return (
     <>
-    <section>
-                <div className="casestudy-intro">
-            <div className="col-1">
-              <p>01</p>
-            </div>
-            <div className="col-2">
-              <p className="stats-title">Role</p>
-              <p className="stats-text">
-                <RichText render={role} />
-              </p>
-              <p className="stats-title">Focus</p>
-              <p className="stats-text">
-                <RichText render={focus} />
-              </p>
-            </div>
-            <div className="col-3">
-              <RichText render={title} />
-              <RichText render={blurb} />
-            </div>
-            </div>
-        {body.map((slice, i) => (
-            <CaseStudySection key={i} slice={slice} />
-          ))}
-
-<div className="bottom">
-           <p>You can check out the live site <a href="https://www.leadingedge.org/">here</a></p>
+      <NavigationCS/>
+      <section>
+        <div className="casestudy-intro">
+          <div className="col-1">
+            <p>01</p>
           </div>
-    </section>
-     <Footer/>
-     </>
+          <div className="col-2">
+            <p className="stats-title">Role</p>
+            <p className="stats-text">
+              <RichText render={role} />
+            </p>
+            <p className="stats-title">Focus</p>
+            <p className="stats-text">
+              <RichText render={focus} />
+            </p>
+          </div>
+          <div className="col-3">
+            <RichText render={title} />
+            <RichText render={blurb} />
+          </div>
+        </div>
+        {body.map((slice, i) => (
+          <CaseStudySection key={i} slice={slice} />
+        ))}
+        {checkOut()}
+
+      </section>
+      <Footer />
+    </>
   );
 };
 
@@ -56,6 +73,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
+      uid: params.uid,
       title: study.data.title,
       blurb: study.data.blurb,
       role: study.data.role,

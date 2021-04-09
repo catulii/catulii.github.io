@@ -2,7 +2,7 @@
 
 
 .about-wrapper {
-    height: 110vh;
+    height: 120vh;
     width: 100%;
 }
 
@@ -108,7 +108,7 @@
     display: flex;
     flex-direction: row;
     padding-left: 62px;
-    padding-top: 94px;
+    padding-top: 83px;
     
 }
 
@@ -116,7 +116,6 @@
     display: flex;
     flex-direction: column;
 }
-
 
 .image-stack_item p {
     font-size: 12px;
@@ -137,3 +136,42 @@
     z-index: 1;
 }
 
+.team img {
+    max-width: 619px;
+    width: 1005
+}
+
+.twilight img {
+    max-width: 264px;
+    width: 100%;
+}
+
+.misc_item-front {
+    z-index: 1;
+    margin-right: 56%;
+    margin-top: 45%;
+}
+
+.misc_item-back {
+    position: absolute;
+    z-index: 1;
+    margin-left: 4%;
+}
+
+.misc_item-back p {
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 30px;
+    margin-left: 280px;
+    width: 240px;
+    color: $palegrey;
+}
+
+.misc_item-back  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1000px) {
+}

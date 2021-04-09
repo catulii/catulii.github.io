@@ -27,7 +27,7 @@ export default function Home({ caseStudies, cyclist_img }) {
 
   return (
     <>
-      {/* <Navigation bg={hover} /> */}
+      <Navigation />
       <div className="main animate__animated animate__fadeInDown">
         <svg src="wave.svg"></svg>
         <div>
@@ -50,7 +50,7 @@ export default function Home({ caseStudies, cyclist_img }) {
             +
           </h1>
 
-          <img src={cyclist_img.url}/>
+          {/* <img src={cyclist_img.url}/> */}
 
           <div className="amongothers">
             <a

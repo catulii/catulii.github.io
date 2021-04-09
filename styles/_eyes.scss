@@ -14,6 +14,34 @@
   width: 100px;
 }
 
+
+@media only screen and (max-width: 1400px) and (min-width: 1000px) {
+  .demeyes {
+    left: 693px;
+    top: 574px;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+  .demeyes {
+    left: 491px;
+    top: 565px;
+  }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 560px)  {
+  .demeyes {
+    left: 393px;
+    top: 617px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .demeyes {
+    left: 286px;
+    top: 685px;
+  }
+}
 .eye {
   position: relative;
   display: inline-block;

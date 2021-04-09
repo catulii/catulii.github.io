@@ -10,7 +10,7 @@ const Navigation = () => {
           <Link href="/">CATU BERRETTA</Link>
         </div>
         <div id="right-nav">
-          <Link href="/work">WORK</Link>
+          {/* <Link href="/work">WORK</Link> */}
           <Link href="/about">ABOUT</Link>
         </div>
       </div>

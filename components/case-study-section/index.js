@@ -1,6 +1,7 @@
 import { RichText } from "prismic-reactjs";
 
 const CaseStudySection = ({ slice }) => {
+  const content = slice.primary;
 
   const renderNext = () => {
 
@@ -8,14 +9,14 @@ const CaseStudySection = ({ slice }) => {
       case "text":
         return (
           <div className="content-text">
-            <RichText render={slice.primary.section_title} />
-            <RichText render={slice.primary.section_paragraph} />
+            <RichText render={content.section_title} />
+            <RichText render={content.section_paragraph} />
           </div>
         );
       case "image":
         return (
           <div  className="content-image">
-            <img src={slice.primary.section_image.url} />
+            <img src={content.section_image.url} />
           </div>
         );
     }

@@ -1,13 +1,14 @@
 import { fetchCaseStudies } from "../api/case-study";
 import { RichText, Link, Date } from "prismic-reactjs";
 import PropTypes from "prop-types";
-import CaseStudySection from "../components/case-study-section";
-import Footer from "../components/footer";
-import NavigationCS from "../components/nav";
+import CaseStudySection from "../../components/case-study-section";
+import Footer from "../../components/footer";
+import NavigationCS from "../../components/nav";
 
 
 const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
 
+  console.log("hey")
   const checkOut = () => {
     switch (uid) {
       case "leadingedge":

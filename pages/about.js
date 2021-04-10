@@ -1,7 +1,7 @@
 import { RichText } from "prismic-reactjs";
 import { getAbout } from "./api/case-study";
-import Navigation from "./components/nav";
-import Footer from "./components/footer";
+import Navigation from "../components/nav";
+import Footer from "../components/footer";
 import React, { useRef, useState } from "react";
 import Image1 from "react-svg-loader!./Star.svg";
 
@@ -20,12 +20,6 @@ const About = ({
   m_text,
 }) => {
   const [tab, setTab] = useState("stats");
-
-  console.log(f_text);
-
-  console.log(m_text);
-  console.log(s_text);
-
 
   const navDisplay = () => {
     switch (tab) {

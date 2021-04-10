@@ -1,6 +1,6 @@
-import Navigation from "./components/nav";
+import Navigation from "../components/nav";
 import { getIndex } from "./api/case-study";
-import Footer from "./components/footer";
+import Footer from "../components/footer";
 import { fetchCaseStudies } from "./api/case-study";
 import React, { useRef, useState } from "react";
 import "animate.css";

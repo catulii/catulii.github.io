@@ -4,6 +4,8 @@ import Navigation from "../components/nav";
 import Footer from "../components/footer";
 import React, { useRef, useState } from "react";
 import Image1 from "react-svg-loader!./Star.svg";
+import "animate.css";
+
 
 const About = ({
   facts,
@@ -59,11 +61,11 @@ const About = ({
         return (
           <div className="image-stack">
             <div className="image-stack_item image-stack_item-back">
-              <img src={f_img1.url} />
+              <img className="animate__animated animate__fadeInDown" src={f_img1.url} />
               <RichText render={f_text} />
             </div>
             <div className="image-stack_item image-stack_item-front">
-              <img src={f_img2.url} />
+              <img className="animate__animated animate__fadeInDown" src={f_img2.url} />
             </div>
           </div>
         );
@@ -71,11 +73,11 @@ const About = ({
         return (
           <div className="image-stack">
             <div className="image-stack_item team image-stack_item-back">
-              <img src={s_img1.url} />
+              <img className="animate__animated animate__fadeInDown" src={s_img1.url} />
               <RichText render={s_text} />
             </div>
             <div className="image-stack_item image-stack_item-front">
-              <img src={s_img2.url} />
+              <img className="animate__animated animate__fadeInDown" src={s_img2.url} />
             </div>
           </div>
         );
@@ -83,11 +85,11 @@ const About = ({
         return (
           <div className="image-stack">
             <div className=" misc_item-back">
-              <img src={m_img2.url} />
+              <img className="animate__animated animate__fadeInDown" src={m_img2.url} />
               <RichText render={m_text} />
             </div>
             <div className="image-stack_item twilight misc_item-front">
-              <img src={m_img1.url} />
+              <img className="animate__animated animate__fadeInDown" src={m_img1.url} />
             </div>
           </div>
         );

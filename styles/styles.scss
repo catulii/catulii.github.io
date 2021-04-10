@@ -6,9 +6,32 @@
 @import "./footer.scss";
 @import "./about.scss";
 
+@font-face {
+  src: url(../fonts/Telegraf-Regular.woff2) format('woff2'),
+        url(../fonts/Telegraf-Regular.woff) format('woff'),
+        url(../fonts/Telegraf-Regular.ttf) format('truetype');
+        font-family: 'Telegraf';
+
+}
+
 :root {
   background-color: $palegrey;
 }
+
+// @font-face {
+//   font-family: 'Telegraf-Regular';
+//   src: local('Telegraf-Regular'), url(./fonts/Telegraf-Regular.woff) format('woff');
+//   /* other formats include: 'woff2', 'truetype, 'opentype',
+//                             'embedded-opentype', and 'svg' */
+// }
+
+// @font-face {
+//   font-family: 'Telegraf-Bold';
+//   src: local('Telegraf-Bold'), url(./fonts/Telegraf-Bold.woff) format('woff');
+//   /* other formats include: 'woff2', 'truetype, 'opentype',
+//                             'embedded-opentype', and 'svg' */
+// }
+
 
 .main {
   width: 100%;
@@ -20,7 +43,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: Telegraf;
+  font-family: 'Telegraf';
   font-style: normal;
   font-weight: 400;
   list-style: none;
@@ -30,9 +53,12 @@
   // background-color: $palegrey;
 }
 
+
 .main h1 {
   color: white;
   font-size: 56px;
+  font-family: 'Telegraf';
+
 }
 
 #catu {

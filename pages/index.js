@@ -1,3 +1,4 @@
+
 import Navigation from "../components/nav";
 import { getIndex } from "./api/case-study";
 import Footer from "../components/footer";
@@ -5,7 +6,6 @@ import { fetchCaseStudies } from "./api/case-study";
 import React, { useRef, useState } from "react";
 import "animate.css";
 import Link from "next/link";
-
 
 
 export default function Home({ caseStudies, cyclist_img }) {

@@ -20,7 +20,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-mighty-mouse": "^1.4.31",
+    "react-smooth-scrollbar": "^8.0.6",
     "sass": "^1.32.8",
+    "smooth-scrollbar": "^8.6.1",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1"
   },

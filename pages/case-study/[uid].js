@@ -8,7 +8,6 @@ import NavigationCS from "../../components/nav";
 
 const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
 
-  console.log("hey")
   const checkOut = () => {
     switch (uid) {
       case "leadingedge":
@@ -28,7 +27,7 @@ const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
   return (
     <>
       <NavigationCS/>
-      <section>
+      <div className="wrapper">
         <div className="casestudy-intro">
           <div className="col-1">
             <p>01</p>
@@ -53,7 +52,7 @@ const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
         ))}
         {checkOut()}
 
-      </section>
+      </div>
       <Footer />
     </>
   );

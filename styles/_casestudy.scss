@@ -1,10 +1,11 @@
 @import "./variables.scss";
 
-section {
+.wrapper {
   display: flex;
   flex-direction: column;
   padding-left: 163px;
   padding-right: 162px;
+  background: $palegrey;
 }
 
 .stuff {
@@ -99,8 +100,9 @@ section {
   color: $red;
 }
 
-@media only screen and (max-width: 1000px) {
-  section {
+@media only screen and (max-width: 1000px) and (min-width: 470px) {
+
+  .wrapper {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -121,5 +123,12 @@ section {
   .casestudy-intro {
     font-size: 12px;
     line-height: 14px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .wrapper {
+    padding: 40px;
+    width: 100vh;
   }
 }

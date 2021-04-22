@@ -7,420 +7,230 @@
 @import "./about.scss";
 
 @font-face {
-  src: url(../fonts/Telegraf-Regular.woff2) format('woff2'),
-        url(../fonts/Telegraf-Regular.woff) format('woff'),
-        url(../fonts/Telegraf-Regular.ttf) format('truetype');
-        font-family: 'Telegraf';
-
+  src: url(../fonts/Telegraf-Regular.woff2) format("woff2"),
+    url(../fonts/Telegraf-Regular.woff) format("woff"),
+    url(../fonts/Telegraf-Regular.ttf) format("truetype");
+  font-family: "Telegraf";
 }
 
-:root {
-  background-color: $palegrey;
-}
-
-// @font-face {
-//   font-family: 'Telegraf-Regular';
-//   src: local('Telegraf-Regular'), url(./fonts/Telegraf-Regular.woff) format('woff');
-//   /* other formats include: 'woff2', 'truetype, 'opentype',
-//                             'embedded-opentype', and 'svg' */
-// }
-
-// @font-face {
-//   font-family: 'Telegraf-Bold';
-//   src: local('Telegraf-Bold'), url(./fonts/Telegraf-Bold.woff) format('woff');
-//   /* other formats include: 'woff2', 'truetype, 'opentype',
-//                             'embedded-opentype', and 'svg' */
-// }
-
-
-.main {
-  width: 100%;
-  width: 100vw;
-  background-color: $red;
-  height: 753px;
-  top: 0;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: 'Telegraf';
+body {
+  font-family: "Telegraf";
   font-style: normal;
   font-weight: 400;
   list-style: none;
   text-decoration: none;
   margin: 0;
   padding: 0;
-  // background-color: $palegrey;
+  height: 100vh;
 }
 
-
-.main h1 {
-  color: white;
-  font-size: 56px;
-  font-family: 'Telegraf';
-
+.alt-text {
+  font-family: Schnyder L;
+  font-style: italic;
+  font-weight: 500;
 }
 
-#catu {
-  //     float: left;
-  //   margin: 5%;
-  position: absolute;
-  left: 105px;
-  top: 72px;
+section {
+  background-color: $red;
+  padding: 0;
 }
 
-#is {
-  position: absolute;
-  left: 342px;
-  top: 118px;
-  animation-delay: 100ms;
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: $margin;
+  margin-right: $margin;
+  padding-top: 180px;
 }
 
-#a {
-  position: absolute;
-  left: 219px;
-  top: 238px;
-  animation-delay: 200ms;
+.main-container {
+  background-color: $red;
+  color: $palegrey;
+  height: 90vh;
+  padding-top: 0px;
+  max-width: 900px;
+  width: 100%;
 }
 
-#designer {
-  color: white;
-  font-size: 56px;
-  left: 428px;
-  top: 237px;
-  position: absolute;
-  animation-delay: 300ms;
+.projects-container a {
+  text-decoration: none;
+  color: $palegrey;
 }
 
-.main a {
-  content: "";
-  transition: transform 0.3s;
-  border: 1px solid white;
-  border-radius: 100%;
-  padding: 20px;
-  z-index: 1000000;
+.main-container:nth-of-type(2) {
+  background-color: $palegrey;
+  color: black;
 }
 
-.main a:hover {
-  transform: rotate(15deg);
-  z-index: 1000000;
+.main-container h1 {
+  font-size: 66px;
+  font-weight: 400;
 }
 
-#plus {
-  position: absolute;
-  left: 876px;
-  top: 264px;
-  animation-delay: 100ms;
-}
-
-.amongothers {
+.right-line {
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  left: 1000px;
-  top: 284px;
+  color: $palegrey;
+}
+
+.vertical-line {
+  border-left: 1px solid $palegrey;
+  height: 250px;
+  width: 1px;
+  align-self: center;
+}
+
+.vertical-text {
+  padding-top: 26px;
+  font-size: 18px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  margin: 0;
+}
+
+.projects-container {
+  margin-left: $margin;
+  margin-right: $margin;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
-.amongothers a {
-  content: "";
-  transition: transform 0.3s;
-  border: 1px solid white;
-  border-radius: 0%;
+.projects-container h1 {
+  font-size: 58px;
+  line-height: 60px;
+  margin: 0;
 }
 
-.amongothers a:hover {
-  transform: rotate(15deg);
-  z-index: 1000000;
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.amongothers-item {
-  width: 188px;
-  margin-bottom: -1px;
+.project:nth-of-type(2) {
+  justify-content: flex-end;
 }
 
-#illustrator {
-  animation-delay: 500ms;
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 550px;
 }
 
-#developer {
-  margin-left: 20%;
-  animation-delay: 800ms;
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 550px;
 }
 
-#director {
-  margin-left: 40%;
-  animation-delay: 1100ms;
+.description {
+  font-style: normal;
+  font-weight: 400;
 }
 
-#cyclist {
-  margin-left: 60%;
-  animation-delay: 1300ms;
-}
-
-#scroll {
-  position: absolute;
-  left: 302px;
-  top: 511px;
-  animation-delay: 1.5s;
-}
-
-#to {
-  position: absolute;
-  left: 496px;
-  top: 621px;
-  animation-delay: 2s;
-}
-
-#see {
-  position: absolute;
-  left: 686px;
-  top: 581px;
-  animation-delay: 2.5s;
-}
-
-#herwork {
-  position: absolute;
-  left: 789px;
-  top: 672px;
-  animation-delay: 3.5s;
-  width: 291px;
-}
-
-.hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
-}
-
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-  transform: scale(1.1);
-}
-
-@media only screen and (max-width: 1400px) and (min-width: 1000px) {
-  #is {
-    left: 323px;
-    top: 118px;
-  }
-
-  #a {
-    left: 167px;
-    top: 238px;
-  }
-
-  #designer {
-    left: 261px;
-    top: 242.04px;
-  }
-
-  #plus {
-    left: 695px;
-    top: 264px;
-  }
-
-  .amongothers {
-    left: 764px;
-    top: 284px;
-  }
-
-  #scroll {
-    left: 207px;
-    top: 514px;
-  }
-
-  #to {
-    left: 414px;
-    top: 624px;
-  }
-
-  #see {
-    left: 577px;
-    top: 584px;
-  }
-
-  #herwork {
-    left: 688px;
-    top: 675px;
-  }
-}
-
-@media only screen and (max-width: 1000px) and (min-width: 800px) {
-  #catu {
-    left: 41px;
-    top: 72px;
-  }
-  #is {
-    left: 191px;
-    top: 142px;
-  }
-
-  #a {
-    left: 317px;
-    top: 118px;
-  }
-
-  #designer {
-    left: 41px;
-    top: 240px;
-  }
-
-  #plus {
-    left: 455px;
-    top: 269px;
-  }
-
-  .amongothers {
-    left: 518px;
-    top: 288px;
-  }
-
-  #scroll {
-    left: 54px;
-    top: 494px;
-  }
-
-  #to {
-    left: 222px;
-    top: 608px;
-  }
-
-  #see {
-    left: 374px;
-    top: 575px;
-  }
-
-  #herwork {
-    left: 485px;
-    top: 696px;
-  }
-}
-
-@media only screen and (max-width: 800px) and (min-width: 560px)  {
-  .main h1 {
-    font-size: 42px;
-  }
-
-  .main {
-    height: 828px;
-  }
-
-  #catu {
-    left: 62px;
-    top: 50px;
-  }
-  #is {
-    left: 95px;
-    top: 150px;
-  }
-
-  #a {
-    left: 229px;
-    top: 80px;
-  }
-
-  #designer {
-    left: 187px;
-    top: 205px;
-  }
-
-  #plus {
-    left: 116px;
-    top: 367px;
-  }
-
-  .amongothers {
-    left: 195px;
-    top: 367px;
-  }
-
-  #scroll {
-    left: 70px;
-    top: 596px;
-  }
-
-  #to {
-    left: 195px;
-    top: 680px;
-  }
-
-  #see {
-    left: 304px;
-    top: 638px;
-  }
-
-  #herwork {
-    left: 347px;
-    top: 768px;
-  }
+.project-img img {
+  max-width: 500px;
+  width: 100%;
+  padding-right: 30px;
 }
 
 
-@media only screen and (max-width: 560px) {
-  .main h1 {
-    font-size: 42px;
+.projects-container a:hover {
+  color: black;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.project:nth-of-type(2) {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+@media only screen and (max-width: 1025px) and (min-width: 470px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: $margin_tablet;
+    margin-right: $margin_tablet;
+    padding-top: 30px;
+    height: 1400px;
   }
 
-  .main {
-    height: 890px;
-    max-width: 1200px;
-    width:100%;
+  .main-container {
+    background-color: $red;
+    color: white;
+    max-width: 900px;
+    width: 100%;
   }
 
-  #catu {
-    left: 62px;
-    top: 50px;
-    
-  }
-  #is {
-    left: 227px;
-    top: 92px;
+  .main-container h1 {
+    font-size: 80px;
+    font-weight: 400;
   }
 
-  #a {
-    left: 131px;
-    top: 150px;
-    
+  .vertical-text {
+    padding-top: 26px;
+    font-size: 34px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .main-container h1 {
+    font-size: 36px;
+    font-weight: 400;
   }
 
-  #designer {
-    left: 27px;
-    top: 234px;
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: $margin_mobile;
+    margin-right: 6px;
+    padding-top: 10px;
+    padding-bottom: 30px;
   }
 
-  #plus {
-    left: 183px;
-    top: 362px;
+  .main-container {
+    background-color: $red;
+    color: white;
+    height: 600px;
+    padding-top: 40px;
+    max-width: 900px;
+    width: 100%;
   }
 
-  .amongothers {
-    left: 97px;
-    top: 429px;
+  .projects-container {
+    margin-left: $margin_mobile;
+    margin-right: $margin_mobile;
   }
 
-  #scroll {
-    left: 23px;
-    top: 617px;
+  .projects-container h1 {
+    font-size: 36px;
+    line-height: 38px;
+    margin: 0;
   }
 
-  #to {
-    left: 87px;
-    top: 748px;
+  .project {
+    max-width: 300px;
+    width: 100%;
   }
 
-  #see {
-    left: 195px;
-    top: 688px;
-  }
 
-  #herwork {
-    left: 177px;
-    top: 830px;
-  }
+.project-img img {
+  visibility: hidden;
+}
 }

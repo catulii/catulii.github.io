@@ -1,4 +1,5 @@
 import { RichText } from "prismic-reactjs";
+import ImageModal from "../image-modal";
 
 const CaseStudySection = ({ slice }) => {
   const content = slice.primary;
@@ -15,9 +16,10 @@ const CaseStudySection = ({ slice }) => {
         );
       case "image":
         return (
-          <div  className="content-image">
-            <img src={content.section_image.url} />
-          </div>
+          <span className="zoomin">
+            <ImageModal image={content.section_image} />
+          </span>
+
         );
     }
   };

@@ -2,27 +2,26 @@ import Navigation from "../components/nav";
 import { getIndex } from "./api/case-study";
 import Footer from "../components/footer";
 import { fetchCaseStudies } from "./api/case-study";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "animate.css";
 import Link from "next/link";
-// import Scrollbar from 'smooth-scrollbar';
-import SmoothScrollbar from "smooth-scrollbar";
-// import OverscrollPlugin from 'smooth-scrollbar/plugins/overflow';
-import Scrollbar from "react-smooth-scrollbar";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 export default function Home({ caseStudies }) {
-
+  const { scroll } = useLocomotiveScroll();
 
   return (
-    <Scrollbar damping={0.01}>
-      <Navigation/>
-      <main>
+    <div data-scroll-container className="landing-wrapper">
+      <Navigation />
+      <div className="main" data-scroll-section>
         <div className="main-container">
-          <h1 className="main-about">
-            <span className="alt-text">Hi, I’m Catu!</span> I am a designer,
-            illustrator and developer living Boston. I love designing and
-            building delightful web experiences, drawing fun doodles and riding
-            my bicycle with no hands.
+          <h1 data-scroll className="main-about">
+            <span className="ani-persc__item">
+              <span className="alt-text">Hi, I’m Catu! </span>I am a designer,
+              illustrator and developer living Boston. I love designing and
+              building delightful web experiences, drawing fun doodles and
+              riding my bicycle with no hands.{" "}
+            </span>
           </h1>
         </div>
 
@@ -30,13 +29,13 @@ export default function Home({ caseStudies }) {
           <div className="vertical-line"></div>
           <h3 className="vertical-text">See my work</h3>
         </div>
-      </main>
+      </div>
 
-      <div className="projects-container">
+      <div data-scroll-section className="projects-container">
         {caseStudies.map((study, i) => (
-          <div className="project">
+          <div data-scroll className="project">
             <div className="project-img">
-              <img 
+              <img data-scroll-call="animationImage, normal, 0.6, 0.8, animate-img-831"
                 className="project-asset-img"
                 src={study.coverImage.url}
                 alt={study.coverImage.alt}
@@ -58,7 +57,9 @@ export default function Home({ caseStudies }) {
           </div>
         ))}
       </div>
-    </Scrollbar>
+
+      <Footer />
+    </div>
   );
 }
 

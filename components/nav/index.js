@@ -4,7 +4,7 @@ import React, {useRef, useEffect}from "react";
 const Navigation = () => {
 
   return (
-    <nav classname="landing">
+    <nav data-scroll-section className="landing">
       <div className="nav">
         <div>
           <Link href="/">CATU BERRETTA</Link>

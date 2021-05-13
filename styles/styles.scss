@@ -5,6 +5,7 @@
 @import "./casestudy.scss";
 @import "./footer.scss";
 @import "./about.scss";
+@import "./locomotive.scss";
 
 @font-face {
   src: url(../fonts/Telegraf-Regular.woff2) format("woff2"),
@@ -30,18 +31,19 @@ body {
   font-weight: 500;
 }
 
-section {
+.landing-wrapper {
   background-color: $red;
   padding: 0;
 }
 
-main {
+.main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-left: $margin;
   margin-right: $margin;
   padding-top: 180px;
+  
 }
 
 .main-container {
@@ -227,10 +229,29 @@ main {
   .project {
     max-width: 300px;
     width: 100%;
+
   }
 
 
 .project-img img {
   visibility: hidden;
 }
+}
+
+.is-inview .ani-persc__item {
+  transform: none;
+  opacity: 1;
+  transition-duration: .8s;
+}
+
+
+.ani-persc__item {
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateY(100%) rotateX(
+-80deg
+);
+  display: block;
+  opacity: 0;
+  transition: opacity 0s cubic-bezie
 }

@@ -3,7 +3,7 @@ import { RichText, Link, Date } from "prismic-reactjs";
 import PropTypes from "prop-types";
 import CaseStudySection from "../../components/case-study-section";
 import Footer from "../../components/footer";
-import NavigationCS from "../../components/nav";
+import Navigation from "../../components/nav";
 
 
 const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
@@ -26,8 +26,8 @@ const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
   }
   return (
     <>
-      <NavigationCS/>
-      <div className="wrapper">
+      <Navigation/>
+      <div data-scroll-section className="wrapper">
         <div className="casestudy-intro">
           <div className="col-1">
             <p>01</p>

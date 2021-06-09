@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-socials">
         <Link
           target="_blank"
-          href="https://drive.google.com/file/d/1B76joAGgwxy0YPxccpEK9-rhtr76kyJ9/view?usp=sharing"
+          href="https://drive.google.com/file/d/1p9RNqgyITIqDf0nnVndHhZrZIWcoX8qK/view?usp=sharing"
         >
           <a>RESUME</a>
         </Link>

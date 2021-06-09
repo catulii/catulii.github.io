@@ -11,6 +11,7 @@ const Gallery = ({ body }) => {
     <>
       <Navigation />
       <div className="gallery-container">
+        <h1>Freelance or For Fun!</h1>
       <Masonry data-scroll-section
         breakpointCols={3}
         className="my-masonry-grid"

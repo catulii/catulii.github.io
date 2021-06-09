@@ -24,6 +24,9 @@
 .col-1 p {
   margin-right: 5px;
 }
+.col-2 p {
+  margin: 2px;
+}
 
 .col-2 {
   max-width: 135px;
@@ -33,7 +36,7 @@
 
 .stats-title {
   opacity: 60%;
-  padding-bottom: 5px;
+padding: 0px;
 }
 
 .stats-text {

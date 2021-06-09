@@ -1,11 +1,11 @@
 import React from "react";
-import useScrollLock from "use-scroll-lock";
+// import useScrollLock from "use-scroll-lock";
 import Modal from "react-modal";
 
 const ImageModal = ({ image }) => {
     const [popOver, togglePopover] = React.useState(false);
 
-    useScrollLock(popOver);
+    // useScrollLock(popOver);
 
     const onExpand = () => {
         togglePopover(!popOver);

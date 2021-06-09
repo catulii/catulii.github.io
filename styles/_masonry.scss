@@ -24,6 +24,7 @@
       padding-top: 120px;
       margin-left: $margin;
       margin-right: $margin;
+      margin-bottom: $margin;
   }
 
   .gallery-container p {
@@ -36,3 +37,8 @@
       max-width: 500px;
   }
 
+
+.freelance-img {
+  width: 100%;
+  // max-width: 1400px;
+}

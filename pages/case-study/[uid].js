@@ -48,7 +48,7 @@ const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
           </div>
         </div>
         {body.map((slice, i) => (
-          <CaseStudySection data-scroll-section key={i} slice={slice} />
+          <CaseStudySection key={i} slice={slice} />
         ))}
         {checkOut()}
 

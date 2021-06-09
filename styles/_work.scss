@@ -1,0 +1,55 @@
+.work-wrapper {
+      display: flex;
+  flex-direction: column;
+  padding-left: 163px;
+  padding-right: 162px;
+  background: $palegrey;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 150px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.content a {
+  text-decoration: none;
+  color: black;
+}
+
+.content a:hover {
+  text-decoration: none;
+  color: $red;
+  transition: 0.3s ease;
+
+}
+
+.content h1 {
+  font-size: 88px;
+}
+
+.workList {
+  padding-left: 30px;
+  padding-top: 120px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.workList h2 {
+  margin: 0;
+  line-height: 30px;
+}
+
+.individual {
+  padding-bottom: 20px;
+}
+
+.who {
+  font-size: 12px;
+}
+
+.what {
+  font-size: 24px;
+}

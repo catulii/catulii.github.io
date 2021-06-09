@@ -31,7 +31,7 @@ const About = ({
             <h3>
               <RichText render={fact.facts_text} />
             </h3>
-            {fact.star ? <Image1 className="lilstar" /> : null}
+            {/* {fact.star ? <Image1 className="lilstar" /> : null} */}
           </div>
         ));
       case "stats":
@@ -40,7 +40,7 @@ const About = ({
             <h3>
               <RichText render={stat.stats_text} />
             </h3>
-            {stat.star ? <Image1 className="lilstar" /> : null}
+            {/* {stat.star ? <Image1 className="lilstar" /> : null} */}
           </div>
         ));
       case "misc":
@@ -49,7 +49,7 @@ const About = ({
             <h3>
               <RichText render={m.misc_text} />
             </h3>
-            {m.star ? <Image1 className="lilstar" /> : null}
+            {/* {m.star ? <Image1 className="lilstar" /> : null} */}
           </div>
         ));
     }
@@ -99,11 +99,11 @@ const About = ({
   return (
     <>
     <Navigation/>
-    <div className="about-wrapper">
+    <div data-scroll-container className="about-wrapper">
       <div className="about">
-        <div className="left">
+        <div data-scroll-section className="left">
           <div className="info-intro">
-            <h1>Hi, I'm Catu!</h1>
+            <h1 data-scroll >Hi, I'm Catu!</h1>
           </div>
 
           <div className="info">
@@ -121,14 +121,14 @@ const About = ({
               </div>
             </div>
 
-            <div className="info-text">{navDisplay()}</div>
+            <div data-scroll className="info-text">{navDisplay()}</div>
           </div>
         </div>
         <div className="right">
-          <div className="images">{imageDisplay()}</div>
+          <div data-scroll-section className="images">{imageDisplay()}</div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
     </>
   );

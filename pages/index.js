@@ -45,7 +45,7 @@ export default function Home({ caseStudies }) {
             <Link href={study.url} key={i}>
               <a>
                 <div className="project-info">
-                  <div>01</div>
+                  <div>0{study.number}</div>
                   <div className="project-text">
                     <h1 className="alt-text">{study.who}</h1>
                     <h1 className="description">{study.title}</h1>
@@ -70,8 +70,9 @@ export async function getStaticProps() {
   return {
     props: {
       cyclist_img: index.data.cyclist,
-      caseStudies: studies.map((study) => {
+      caseStudies: studies.map((study, i) => {
         return {
+          number: i,
           title: study.data.title[0].text,
           url: `/case-study/${encodeURIComponent(study.uid)}`,
           who: study.data.who[0].text,

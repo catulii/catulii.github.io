@@ -7,6 +7,7 @@
 @import "./about.scss";
 @import "./locomotive.scss";
 @import "./masonry.scss";
+@import "./work.scss";
 
 @font-face {
   src: url(../fonts/Telegraf-Regular.woff2) format("woff2"),
@@ -144,6 +145,7 @@ body {
   max-width: 500px;
   width: 100%;
   padding-right: 30px;
+  padding-left: 30px;
 }
 
 

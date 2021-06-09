@@ -20,6 +20,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="footer-email">
+        <p className="madeBy">Made with love by Catu</p>
         <Image1 />
         <p>BERRETTA.C@NORTHEASTERN.EDU</p>
       </div>

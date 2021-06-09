@@ -16,6 +16,10 @@ export const getAbout = async () => {
     return await getPage("about");
 };
 
+export const getGallery = async () => {
+    return await getPage("gallery");
+};
+
 export const getIndex = async () => {
     return await getPage("index");
 };

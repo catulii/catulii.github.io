@@ -27,28 +27,28 @@ const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
   return (
     <>
       <Navigation/>
-      <div data-scroll-section className="wrapper">
+      <div data-scroll-container className="wrapper">
         <div className="casestudy-intro">
-          <div className="col-1">
-            <p>01</p>
+          <div data-scroll-section className="col-1">
+            <p data-scroll >01</p>
           </div>
-          <div className="col-2">
-            <p className="stats-title">Role</p>
-            <p className="stats-text">
+          <div data-scroll-section className="col-2">
+            <p data-scroll className="stats-title">Role</p>
+            <p data-scroll className="stats-text">
               <RichText render={role} />
             </p>
-            <p className="stats-title">Focus</p>
-            <p className="stats-text">
+            <p data-scroll  className="stats-title">Focus</p>
+            <p data-scroll className="stats-text">
               <RichText render={focus} />
             </p>
           </div>
-          <div className="col-3">
-            <RichText render={title} />
-            <RichText render={blurb} />
+          <div data-scroll-section className="col-3">
+            <RichText data-scroll  render={title} />
+            <RichText data-scroll  render={blurb} />
           </div>
         </div>
         {body.map((slice, i) => (
-          <CaseStudySection key={i} slice={slice} />
+          <CaseStudySection data-scroll-section key={i} slice={slice} />
         ))}
         {checkOut()}
 

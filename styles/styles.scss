@@ -155,7 +155,7 @@ body {
   cursor: pointer;
 }
 
-.project:nth-of-type(2) {
+.project:nth-of-type(even) {
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-self: flex-end;

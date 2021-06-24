@@ -32,7 +32,7 @@ export default function Home({ caseStudies }) {
       </div>
 
       <div data-scroll-section className="projects-container">
-        {caseStudies.map((study, i) => (
+        {caseStudies.slice(0).map((study, i) => (
           <div data-scroll className="project">
             <div className="project-img">
               <img data-scroll-call="animationImage, normal, 0.6, 0.8, animate-img-831"

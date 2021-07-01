@@ -3,7 +3,7 @@ import Prismic from "@prismicio/client";
 
 export const fetchCaseStudies = async () => {
     let studies = await Client().query(
-        Prismic.Predicates.at("document.type", "case-study")
+        Prismic.Predicates.at("document.type", "case-study", { orderings : '[ordernumber]' })
     );
     return studies.results;
 };

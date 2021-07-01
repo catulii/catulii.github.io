@@ -28,6 +28,12 @@ const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
                 <p>You can check out the working prototype <a href="https://www.figma.com/proto/QLQmMZofjL4pJB495cqaVV/Information-Design-Project-2_Catalina-Berretta?node-id=105%3A1075&scaling=min-zoom">here</a></p>
               </div>
             )
+            case "houseshows":
+              return (
+                <div data-scroll-section className="bottom">
+                  <p>You can see more of my graphic design work <a href="https://www.instagram.com/catu.li/">here</a></p>
+                </div>
+              )
     }
   }
   return (

@@ -22,6 +22,12 @@ const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
               <p>You can check out the hi-fi wireframes <a href="https://www.figma.com/proto/cd09VVWSranlV8Wn0ZjxpS/AFH-Hi-FI-Wireframes?node-id=231%3A4&scaling=min-zoom&page-id=231%3A0">here</a></p>
             </div>
           )
+          case "electionproject":
+            return (
+              <div className="bottom">
+                <p>You can check out the working prototype <a href="https://www.figma.com/proto/QLQmMZofjL4pJB495cqaVV/Information-Design-Project-2_Catalina-Berretta?node-id=105%3A1075&scaling=min-zoom">here</a></p>
+              </div>
+            )
     }
   }
   return (

@@ -13,13 +13,13 @@ const Gallery = ({ body }) => {
       <div className="gallery-container">
         <h1>Freelance or For Fun!</h1>
         <p>See more on my <a href="https://www.instagram.com/catu.li/">Instagram</a></p>
-      <Masonry data-scroll-section
+      <Masonry
         breakpointCols={3}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
         {body.map((galleryItem, i) => (
-          <div data-scroll className="gallery-item" key={i}>
+          <div className="gallery-item" key={i}>
             <img src={galleryItem.image.url} />
             <p>  <RichText render={galleryItem.image_caption} /></p>
           </div>

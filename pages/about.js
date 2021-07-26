@@ -99,11 +99,11 @@ const About = ({
   return (
     <>
     <Navigation/>
-    <div data-scroll-container className="about-wrapper">
+    <div  className="about-wrapper">
       <div className="about">
-        <div data-scroll-section className="left">
+        <div  className="left">
           <div className="info-intro">
-            <h1 data-scroll >Hi, I'm Catu!</h1>
+            <h1  >Hi, I'm Catu!</h1>
           </div>
 
           <div className="info">
@@ -121,11 +121,11 @@ const About = ({
               </div>
             </div>
 
-            <div data-scroll className="info-text">{navDisplay()}</div>
+            <div  className="info-text">{navDisplay()}</div>
           </div>
         </div>
         <div className="right">
-          <div data-scroll-section className="images">{imageDisplay()}</div>
+          <div  className="images">{imageDisplay()}</div>
         </div>
       </div>
       <Footer/>

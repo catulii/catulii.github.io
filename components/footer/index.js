@@ -4,7 +4,7 @@ import Image1 from "react-svg-loader!./Star.svg";
 
 const Footer = () => {
   return (
-    <div data-scroll-section className="footer-container">
+    <div className="footer-container">
       <div className="footer-socials">
         <Link
           target="_blank"

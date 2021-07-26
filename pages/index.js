@@ -11,19 +11,18 @@ export default function Home({ caseStudies }) {
   const { scroll } = useLocomotiveScroll();
 
   return (
-    <div data-scroll-container className="landing-wrapper">
+    <div  className="landing-wrapper">
       <Navigation />
-      <div className="main" data-scroll-section>
+      <div className="main">
         <div className="main-container">
-          <h1 data-scroll className="main-about">
-            <span className="ani-persc__item">
+          <h1  className="main-about">
               <span className="alt-text">Hi, I’m Catu! </span>I am a designer,
               illustrator and developer living Boston. I love designing and
               building delightful web experiences, drawing fun doodles and
-              riding my bicycle with no hands.{" "}
-            </span>
+              riding my bicycle with no hands.
           </h1>
         </div>
+    
 
         <div className="right-line">
           <div className="vertical-line"></div>
@@ -31,11 +30,11 @@ export default function Home({ caseStudies }) {
         </div>
       </div>
 
-      <div data-scroll-section className="projects-container">
+      <div  className="projects-container">
         {caseStudies.slice(0).map((study, i) => (
-          <div data-scroll className="project">
+          <div  className="project">
             <div className="project-img">
-              <img data-scroll-call="animationImage, normal, 0.6, 0.8, animate-img-831"
+              <img 
                 className="project-asset-img"
                 src={study.coverImage.url}
                 alt={study.coverImage.alt}

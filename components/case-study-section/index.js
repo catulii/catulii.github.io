@@ -9,21 +9,21 @@ const CaseStudySection = ({ slice }) => {
     switch (slice.slice_type) {
       case "text":
         return (
-          <div data-scroll-section className="content-text">
-            <RichText data-scroll render={content.section_title} />
-            <RichText data-scroll render={content.section_paragraph} />
+          <div  className="content-text">
+            <RichText  render={content.section_title} />
+            <RichText  render={content.section_paragraph} />
           </div>
         );
       case "image":
         return (
-          <span data-scroll-section className="zoomin">
-            <ImageModal data-scroll image={content.section_image} />
+          <span  className="zoomin">
+            <ImageModal  image={content.section_image} />
           </span>
         );
       case "gallery":
         return (
           <Masonry
-            data-scroll-section
+            
             breakpointCols={2}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"

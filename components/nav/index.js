@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React, {useRef, useEffect}from "react";
 
+
 const Navigation = () => {
 
   return (
-    <nav data-scroll-section className="landing">
+    <>
+    <nav className="landing">
       <div className="nav">
         <div>
           <Link href="/">CATU BERRETTA</Link>
@@ -16,6 +18,7 @@ const Navigation = () => {
         </div>
       </div>
     </nav>
+    </>
   );
 };
 

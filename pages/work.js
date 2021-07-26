@@ -9,16 +9,16 @@ export default function Work({ caseStudies }) {
   return (
     <>
       <Navigation />
-      <div data-scroll-container className="work-wrapper">
-        <div data-scroll-section className="content">
-          <h1 data-scroll>All work</h1>
-          <div data-scroll-section className="workList">
+      <div  className="work-wrapper">
+        <div  className="content">
+          <h1 >All work</h1>
+          <div  className="workList">
             {caseStudies.map((study, i) => (
               <Link href={study.url} key={i}>
                 <a>
                     <div className="individual">
-                    <h2 className="who" data-scroll>{study.who}</h2>
-                  <h2 className="what" data-scroll>{study.title}</h2>
+                    <h2 className="who" >{study.who}</h2>
+                  <h2 className="what" >{study.title}</h2>
                     </div>
 
                 </a>

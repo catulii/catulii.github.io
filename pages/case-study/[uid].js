@@ -8,29 +8,30 @@ import Navigation from "../../components/nav";
 
 const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
 
+
   const checkOut = () => {
     switch (uid) {
       case "leadingedge":
         return (
-          <div data-scroll-section className="bottom">
+          <div  className="bottom">
             <p>You can check out the live site <a href="https://www.leadingedge.org/">here</a></p>
           </div>
         )
         case "afh":
           return (
-            <div data-scroll-section className="bottom">
+            <div  className="bottom">
               <p>You can check out the hi-fi wireframes <a href="https://www.figma.com/proto/cd09VVWSranlV8Wn0ZjxpS/AFH-Hi-FI-Wireframes?node-id=231%3A4&scaling=min-zoom&page-id=231%3A0">here</a></p>
             </div>
           )
           case "electionproject":
             return (
-              <div data-scroll-section className="bottom">
+              <div  className="bottom">
                 <p>You can check out the working prototype <a href="https://www.figma.com/proto/QLQmMZofjL4pJB495cqaVV/Information-Design-Project-2_Catalina-Berretta?node-id=105%3A1075&scaling=min-zoom">here</a></p>
               </div>
             )
             case "houseshows":
               return (
-                <div data-scroll-section className="bottom">
+                <div  className="bottom">
                   <p>You can see more of my graphic design work <a href="https://www.instagram.com/catu.li/">here</a></p>
                 </div>
               )
@@ -39,24 +40,24 @@ const CaseStudy = ({ title, blurb, role, focus, body, uid }) => {
   return (
     <>
       <Navigation/>
-      <div data-scroll-container className="wrapper">
+      <div className="wrapper">
         <div className="casestudy-intro">
-          <div data-scroll-section className="col-1">
-            <p data-scroll >01</p>
+          <div  className="col-1">
+            <p  >01</p>
           </div>
-          <div data-scroll-section className="col-2">
-            <p data-scroll className="stats-title">Role</p>
-            <p data-scroll className="stats-text">
+          <div  className="col-2">
+            <p  className="stats-title">Role</p>
+            <p  className="stats-text">
               <RichText render={role} />
             </p>
-            <p data-scroll  className="stats-title">Focus</p>
-            <p data-scroll className="stats-text">
+            <p  className="stats-title">Focus</p>
+            <p  className="stats-text">
               <RichText render={focus} />
             </p>
           </div>
-          <div data-scroll-section className="col-3">
-            <RichText data-scroll  render={title} />
-            <RichText data-scroll  render={blurb} />
+          <div  className="col-3">
+            <RichText   render={title} />
+            <RichText   render={blurb} />
           </div>
         </div>
         {body.map((slice, i) => (

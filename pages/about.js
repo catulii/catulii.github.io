@@ -107,18 +107,7 @@ const About = ({
           </div>
 
           <div className="info">
-            <div className="tabs-wrapper">
-              <div className="tabs">
-                <a className="tab" onMouseEnter={(ev) => setTab("facts")}>
-                  FACTS
-                </a>
-                <a className="tab" onMouseEnter={(ev) => setTab("stats")}>
-                  STATS
-                </a>
-                <a className="tab" onMouseEnter={(ev) => setTab("misc")}>
-                  MISC
-                </a>
-              </div>
+        
             </div>
 
             <div  className="info-text">{navDisplay()}</div>

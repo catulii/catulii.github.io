@@ -11,11 +11,14 @@ body {
 
 
 .banner {
-    font-size: 1.75rem;
+    background-color: #FFFFCC;
     text-align: center;
-    padding: 15px 10px 10px 10px;
-    background-color: #58A6F9;
-    color: black;
+    font-size: 1.5rem;
+    margin-top: .75em;
+}
+
+.banner p {
+    line-height: 1px;
 }
 
 .main {
@@ -49,4 +52,10 @@ td {
 h1 {
     font-weight: 400;
     font-style: italic;
+}
+
+.late {
+    padding: 0 0 0 1em;
+    line-height: 0px;
+    /* background-color: #CFCFFF; */
 }

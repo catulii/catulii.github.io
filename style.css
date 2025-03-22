@@ -1,0 +1,23 @@
+img {
+    width: 500px;
+    max-width: 100%;
+}
+
+body {
+    background: #CCCCFF;
+}
+
+.banner {
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 15px 10px 10px 10px;
+    background-color: #58A6F9;
+    color: black;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    outline: 1px solid white;
+}
